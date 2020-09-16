@@ -21,7 +21,6 @@ def get_nb_char(string: str, char: str) -> int:
 
 def get_nb_words(sentence: str) -> int:
     return len(sentence.split())
-    # return sentence.count(' ') + 1  --> marche juste sur une phrase bien formate
 
 
 def main() -> None:
