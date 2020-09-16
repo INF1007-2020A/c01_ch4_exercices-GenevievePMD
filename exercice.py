@@ -8,6 +8,7 @@ def is_even_len(string: str) -> bool:
 
 def remove_third_char(string: str) -> str:
     return string.replace(string[2], '')
+    # autre methode : return string[:2] + string[3:]
 
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
@@ -15,11 +16,12 @@ def replace_char(string: str, old_char: str, new_char: str) -> str:
 
 
 def get_nb_char(string: str, char: str) -> int:
-    return 0
+    return string.count(char)
 
 
 def get_nb_words(sentence: str) -> int:
-    return 0
+    return len(sentence.split())    # Separe la phrase en mots et compte le nbre de mots
+    # return sentence.count(' ') + 1  --> marche juste sur une phrase bien formate
 
 
 def main() -> None:
@@ -33,7 +35,7 @@ def main() -> None:
     string = "hello world!"
     print(f"On remplace le caratère w par le caractère z dans la chaine: '{string}'. Résultat: {replace_char(string, 'w', 'z')}")
 
-    print(f"Le nombre d'occurrence de l dans hello est : {get_nb_char(string, 'l')}")
+    print(f"Le nombre d'occurrence de l dans hello world est : {get_nb_char(string, 'l')}")
     
     string = "Baby shark doo doo doo doo doo doo"
     print(f"Le nombre de mots dans la chaine {string} est: {get_nb_words(string)}")
