@@ -20,7 +20,7 @@ def get_nb_char(string: str, char: str) -> int:
 
 
 def get_nb_words(sentence: str) -> int:
-    return len(sentence.split())    # Separe la phrase en mots et compte le nbre de mots
+    return len(sentence.split())
     # return sentence.count(' ') + 1  --> marche juste sur une phrase bien formate
 
 
